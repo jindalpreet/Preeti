@@ -1,0 +1,21 @@
+@Override
+	public EmployeeDetail process(EmployeeDetail emp) throws Exception {
+		//System.out.println("Employee Details :"+emp);
+		HashMap<Integer, EmployeeDetail> map = new HashMap<Integer, EmployeeDetail>();
+		map.put(emp.getId(), emp);
+		Set<Integer> ids = map.keySet();
+		
+		
+		/*ArrayList<EmployeeDetail>[] list = (ArrayList<EmployeeDetail>[])new ArrayList[4];
+		System.out.println(map.get(1));*/
+		//System.out.println(ids.size());
+		for (Integer id : ids) {
+			/*list[id]= new ArrayList<EmployeeDetail>();
+			list[id].add(map.get(id));*/
+			FileOutputStream fos = new FileOutputStream("file"+id);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(map.get(id));
+		}
+		//System.out.println(list[1]);
+		return emp;
+	}
