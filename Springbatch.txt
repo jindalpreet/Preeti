@@ -1,0 +1,10 @@
+1 - 10 files - EMP Details
+
+Create Folder to read the files /SpringBatch/Read/
+
+Create Folder to archive the files /SpringBatch/Archive/
+
+1.Once u start the batch, it shld look for any zip file. If exists, move the zip to Archive and start with processing.
+2. Read each file and create unique file for each employee iD . Append next line for duplicates.
+3. Create the zip file and delete all the generated txt files.
+
